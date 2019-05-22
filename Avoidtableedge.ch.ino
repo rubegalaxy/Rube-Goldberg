@@ -1,6 +1,6 @@
 /*
 * Robotics with the BOE Shield - AvoidTableEdge
-* Adaptation of FastIrRoaming for table edge avoidance
+* Code source 'Parallax' Modifications by Chinyere Okpala
 */
 #include <Servo.h> // Include servo library
 Servo servoLeft; // Declare left and right servos
@@ -10,18 +10,18 @@ void setup() // Built-in initialization block
 {
 pinMode(10, INPUT); pinMode(9, OUTPUT); // Left IR LED & Receiver
 pinMode(3, INPUT); pinMode(2, OUTPUT); // Right IR LED & Receiver
-tone(4, 3000, 1000); // Play tone for 1 second
+tone(4, 1047, 1000); // Play tone for 1 second
 delay(1000); // Delay to finish tone
-servoLeft.attach(13); // Attach left signal to pin 13
-servoRight.attach(12); // Attach right signal to pin 12
+servoLeft.attach(13); // Attach left signal to pin 13 and right to 12
+servoRight.attach(12); 
 }
 void loop() // Main loop auto-repeats
 {
-int irLeft = irDetect(9, 10, 38000); // Check for object on left
-int irRight = irDetect(2, 3, 38000); // Check for object on right
+int irLeft = irDetect(9, 10, 38000); // Check for object on left and right
+int irRight = irDetect(2, 3, 38000); 
 if((irLeft == 0) && (irRight == 0)) // Object detected by both receivers
  {
- maneuver(200, 200, 20);     // Move forward for 20 ms
+ maneuver(-200, -200, 20);     // Move forward for 20 ms
  }
  else if(irLeft == 0)       //object detected on the left
  {
@@ -33,7 +33,7 @@ if((irLeft == 0) && (irRight == 0)) // Object detected by both receivers
  }
  else
  {
- maneuver(-200, -200, 20);  //Move backward for 20 ms
+ maneuver(200, 200, 20);  //Move backward for 20 ms
  }
 }
 
@@ -47,10 +47,9 @@ return ir; // Return 1 no detect, 0 detect
 }
 void maneuver(int speedLeft, int speedRight, int msTime)
 {
-// speedLeft, speedRight ranges: Backward Linear Stop Linear Forward
-// -200 -100....0....100 200
-servoLeft.writeMicroseconds(1500 + speedLeft); // Left servo speed
-servoRight.writeMicroseconds(1500 - speedRight); // Right servo speed
+
+servoLeft.writeMicroseconds(1500 - speedLeft); // Left servo speed
+servoRight.writeMicroseconds(1500 + speedRight); // Right servo speed
 
 if(msTime==-1) // If msTime = -1
 {
