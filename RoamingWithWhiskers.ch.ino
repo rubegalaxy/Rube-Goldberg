@@ -1,6 +1,7 @@
 //Robotics with the BOE Shield - RoamingWithWhiskers
 //Go forward, Back up and turn if whiskers indicate BOE Shield-Bot bynoed 
 //into something.
+//Code source 'Parallax' Modifications by Chinyere Okpala
 
 #include <Servo.h>    // initiazlize servo library
 
