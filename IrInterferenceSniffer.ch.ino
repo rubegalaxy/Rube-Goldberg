@@ -1,4 +1,4 @@
-/*
+/*Code source 'Parallax' Modifications by Chinyere Okpala
 * Robotics with the BOE Shield - IrInterferenceSniffer
 * Test for external sources of IR interference. If IR interference is
 * detected: Serial Monitor displays warning, piezospeaker plays alarm,
