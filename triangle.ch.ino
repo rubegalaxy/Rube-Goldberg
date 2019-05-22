@@ -1,6 +1,6 @@
-// Robotics with the BOE Shield - Chapter 4, project 2 - Triangle
-// BOE Shield-Bot navigates a triangle with 1 yard sides and 120
-// degree angles. Go straight 1 yard, turn 120 degrees, repeat 3 times
+/* Robotics with the BOE Shield - Chapter 4, project 2 - Triangle
+ BOE Shield-Bot navigates a triangle with 1 yard sides and 120
+ degree angles. Go straight 1 yard, turn 120 degrees, repeat 3 times*/
 #include <Servo.h> // Include servo library
 Servo servoLeft; // Declare left and right servos
 Servo servoRight;
