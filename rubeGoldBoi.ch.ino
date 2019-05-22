@@ -5,6 +5,7 @@
 //{1,1,2,2,2,4,1,1,2,2,2,4,1,1,3,1,2,4,1,1,2,2,2};
 //gecegCEDCefgggEDCbabCCgzx
 //songLength=25
+//Code source 'Parallax' Modifications by Chinyere Okpala and Kenan Anderson
 #include <LiquidCrystal.h>
 LiquidCrystal lcd(12,11,5,4,3,2);
 const int photoPin = 0;
