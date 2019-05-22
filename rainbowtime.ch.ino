@@ -9,8 +9,7 @@ Make an RGB LED display a rainbow of colors!
 
 This sketch was written by SparkFun Electronics,
 with lots of help from the Arduino community.
-Visit http://learn.sparkfun.com/products/2 for SIK information.
-Visit http://www.arduino.cc to learn about the Arduino.
+Modifications by Chinyere Okpala
 */
 
 //create variables for pin numbers. We are making them constants here, because they       //never change. 
